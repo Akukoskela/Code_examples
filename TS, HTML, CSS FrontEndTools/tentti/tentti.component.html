@@ -1,0 +1,75 @@
+<div class="kaikki">
+
+    <h1>Maatalousnäyttelyn lippuhinnat</h1>
+    <br>
+
+    <p>Normilippu:</p>
+
+    <mat-slider aria-label="unit(s)" id="perus" min="0" max="10" value="0" (input)="onInputChange1($event)">
+    </mat-slider> {{perusLippuMaara}}
+
+    <br>
+
+    <p>Opiskelija:</p>
+
+    <mat-slider aria-label="unit(s)" min="0" max="10" value="0" (input)="onInputChange2($event)">
+    </mat-slider> {{opiskelijaLippuMaara}}
+
+    <br>
+
+    <p>Eläkeläinen:</p>
+
+    <mat-slider aria-label="unit(s)" min="0" max="10" value="0" (input)="onInputChange3($event)">
+    </mat-slider> {{elakelaisLippuMaara}}
+
+    <br>
+
+    <mat-slide-toggle (change)="onChange($event.checked)">MTK:n jäsen</mat-slide-toggle>
+
+    <br>
+    <br>
+
+    Yhteensä: {{lopullinenSumma}} €
+    <br> <br>
+
+    <form [formGroup]="profileForm">
+
+        <mat-form-field appearance="fill">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="First name" formControlName="firstName">
+
+            <mat-error *ngIf="firstName?.hasError('required')"> Enter your first name </mat-error>
+            <mat-error *ngIf="firstName?.hasError('minlength')"> Minimium 2 characters </mat-error>
+            <mat-error *ngIf="firstName?.hasError('pattern')">Must be valid name</mat-error>
+
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="Last name" formControlName="lastName">
+
+            <mat-error *ngIf="lastName?.hasError('required')"> Enter your last name </mat-error>
+            <mat-error *ngIf="lastName?.hasError('minlength')">Minimiun 2 characters</mat-error>
+            <mat-error *ngIf="lastName?.hasError('pattern')">Must be valid name</mat-error>
+
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email">
+
+            <mat-error *ngIf="email?.hasError('required')"> Liput lähetetään tähän osoitteeseen </mat-error>
+            <mat-error *ngIf="email?.hasError('minlength')">Minimiun 3 characters</mat-error>
+            <mat-error *ngIf="email?.hasError('pattern')">Must be valid email</mat-error>
+
+        </mat-form-field>
+        <br>
+        <button (click)="onSubmit()" [disabled]="!profileForm.valid"> Osta liput</button>
+    </form>
+
+    
+</div>
