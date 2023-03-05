@@ -1,0 +1,28 @@
+.kokopaska {
+    display: table;
+    margin-top: 5%;
+    margin-left: 35%;
+    border-style: solid;
+    border-spacing: 20px;
+
+}
+
+.yläosa {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.plusmiinusteksti {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.alaosa {
+    margin-left: 20px;
+}

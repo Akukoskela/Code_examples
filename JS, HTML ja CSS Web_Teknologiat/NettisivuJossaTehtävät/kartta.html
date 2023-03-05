@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/kartta.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <br>
+    <h1>Karttatehtävä</h1>
+    <br>
+
+    <ul class="nav">
+        <li class="nav-item"> <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\index.html">Koti</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\javaTutustuminen.html">Javaan
+                tutustuminen</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\kartta.html">Kartta
+                tehtävä</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\laskin.html">Laskin</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\media.html">Media</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\ruudukko.html">Ruudukko</a>
+        </li>
+        <li class="nav-item"> <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\ajax.html">Ajax</a>
+        </li>
+
+
+    </ul>
+    <div class="container">
+        <div class="kartta">
+
+            <iframe id="inlineFrameExample" title="Inline Frame Example" width="700" height="600"
+                src="https://www.google.com/maps?q=Sorinkatu 3 Tampere&output=embed">
+            </iframe>
+
+        </div>
+        <div class="kirjotusPalkitJaHae">
+
+            <tr>
+                <td>
+                    <label for="katuosoiteTeksti">Katuosoite</label>
+                </td>
+                <td>
+                    <input type="text" id="katuosoiteArvo" name="katuosoite" value="Sorinkatu 3">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="kaupunkiteksti">Kaupunki</label>
+                </td>
+                <td>
+                    <input type="text" id="kaupunkiArvo" name="kaupunki" value="Tampere">
+                </td>
+            </tr>
+            <button type="button" onclick="HaeOsoite()">Hae</button>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script defer src="javascript/kartta.js"></script>
+</body>
+
+</html>

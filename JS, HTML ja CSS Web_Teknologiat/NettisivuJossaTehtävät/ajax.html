@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon (2).ico">
+
+    <link rel="stylesheet" href="css/ajax.css">
+
+
+</head>
+
+<body>
+    <br>
+    <h1>Ajax</h1>
+    <br>
+    <ul class="nav">
+        <li class="nav-item"> <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\index.html">Koti</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\javaTutustuminen.html">Javaan
+                tutustuminen</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\kartta.html">Kartta
+                tehtävä</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\laskin.html">Laskin</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\media.html">Media</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\ruudukko.html">Ruudukko</a>
+        </li>
+        <li class="nav-item"> <a class="nav-link"
+                href="C:\Users\sk\OneDrive\Documents\Kouluhommat\WebTeknologiat\WebTeknologiaTehtävät2022\LiisanOsaKurssista\NettisivuJossaTehtävät\ajax.html">Ajax</a>
+        </li>
+
+
+    </ul>
+    <div class="kokopaska">
+        <div id="demo" class="accordion accordion-flush">
+
+            <h3>Haluatko kuulla vitsejä Chuck Norriksesta ja mielenkiintoisia juttuja luvuista?</h3>
+
+
+
+        </div>
+
+        <div class="gifi" id="gifi">
+
+            <img id="gif" src="images/tiimalasi.gif">
+
+        </div>
+
+        <div class="nappula">
+            <button class="btn btn-primary" type="button" onclick="loadDoc()">Haluan!</button>
+        </div>
+
+
+
+        <div class="laskuri" id="laskuri">
+            <p>Laskuri: 0</p>
+        </div>
+
+
+        <div class="accordion" id="accordionExample">
+
+            <div class="accordion-item">
+
+                <h2 class="accordion-header" id="headingOne">
+
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Chuck Norris vitsi 1
+                    </button>
+
+                </h2>
+
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body">
+                        <strong>Tähän tulee haettu juttu!</strong>
+                    </div>
+
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Chuck Norris vitsi 2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Numero juttu 1
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                        Numero juttu 2
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                        Numero juttu 3
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/ajax.js"></script>
+</body>
+
+</html>
