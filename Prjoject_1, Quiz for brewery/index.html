@@ -1,0 +1,790 @@
+<header>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" as="font" href="https://fontsfree.net//wp-content/fonts/basic/sans-serif/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf" type="font/truetype" crossorigin="anonymous">
+    <script>//jos halutaan muuttaa vastauvaihtoehtojen lauseita niin täytyy muistaa, että ensimmäisenä vastausvaihtoehtona täytyy olla myöntävä ja toisessa vastausvaihtoehdossa kieltävä vastausvaihtoehto. Näin vaihtoehtojen tekstejä voidaan muuttaa ilman suurempaa säätämistä
+        const kysely = [
+            {
+                kysymys: "Tänään mieleni tekisi...?",
+                vastaus: ["Tuttua ja turvallista", "Kokeilla jotain uutta!", "Jotain hedelmällistä", "Jotain tuhdimpaa ja paahteista"]
+            },
+            {
+                kysymys: "Millainen illanvietto on sinulle mieleinen?",
+                vastaus: ["Tanssilattia kutsuu vielä!", "Pubissa istuskelu hyvässä seurassa", "Yksille on kiva tulla ja ajoissa kotiin.", ""]
+            },
+            {
+                kysymys: "Juon kahvini...",
+                vastaus: ["Maidolla/kermalla", "Mustana", "En juo kahvia", ""]
+            },
+            {
+                kysymys: "Suosikkiherkkuni naposteluun...",
+                vastaus: ["Juustolautanen", "Irtokarkit", "Sipsit ja dippi", ""]
+            },
+            {
+                kysymys: "Lempieläimeni on...",
+                vastaus: ["Tiikeri", "Pöllö", "Laiskiainen", ""]
+            },
+            {
+                kysymys: "Suositko paikallista?",
+                vastaus: ["Kyllä", "En", "En osaa sanoa", ""]
+            }
+        ];
+
+        //Luodaan eri olut-tyypeille oma kuvaus, joka tulostetaan lopputulokseen riippuen minkä oluttyypin asiakas saa.
+        LagerTeksti = "Valtaosa maailmassa nautitusta oluesta on pohjahiivaolutta, nimenomaan lageria. Myös Suomessa se on eniten juotu oluttyyppi. Lager on pohjahiivaoluiden yleisnimi ja yleisimmin nautittu olut maailmalla. Sen alkuperä on oluelle yleensä ottaen varsin nuori: se aloitti maailmanvalloituksensa vasta 1800-luvulla. Lager (saks. varasto, sana tulee saksan kielestä) viittaa sellaisiin oluttyyppeihin, joiden varastokäyminen tapahtuu viileässä ja on siksi melko pitkä.\nLagerit ovat raikkaita, tasapainoisia ja helposti lähestyttäviä pohjahiivaoluita. Niiden kevyttä maltaisuutta tasapainottaa miedon aromaattinen humalointi. Lagereiden tuoksua voi kuvata kevyen viljaisaksi ja maltaiseksi, makua maltillisesti humaloiduksi, raikkaaksi ja yleensä kuivahkoksi."
+        IPATeksti = "IPA (Indian Pale Ale) on voimakkaasti humaloitu ja alkoholiltaan vahva ale-oluttyyppi. IPA kehitettiin aikoinaan kestämään pitkä merimatka Intiaan. Pintahiivaolut.\nIPA:n maussa on selkeää maltaisuutta, jota täydentää aromikas humalointi, mikä jättää kokonaisvaikutelman kuivahkoksi. Tuoksussa on karamellimaltaiden leipämäisyyttä, keksiä tai toffeeta sekä perinteisesti brittihumalan maamaisuutta, kukkaa ja ruohoa. IPAn mallaspohja saattaa olla hyvinkin tuhti riippuen alkoholipitoisuudesta"
+        PaleAleTeksti = " Amerikkalaistyylisen pale alen juuret ovat brittityylisessä pale alessa, mutta humaloinnissa on käytetty amerikkalaisia humalia, joista tuoksuun tulee sitrusta ja kukkaisuutta. Maltaisuudeltaan amerikkalainen pale ale on brittiserkkuaan hieman kepeämpää."
+        SourTeksti = "Sour on kirpeän hapan ja hedelmäinen. Maku ei usein muistuta ”perusolutta”. Maustetaan usein hedelmillä tai marjoilla. Hapanoluissa on mikrobeja, jotka tekevät suolistolle hyvää.\nMiksi nyt on muotia juoda tavallisen kuluttajan käsityksen mukaan hapanta, siis pilaantunutta olutta? Hapanolut on syntynyt satoja vuosia sitten, kun luonnon annettiin valmistaa vierre olueksi villihiivojen ja bakteerien avulla. Lambicit, sour alet ja berliner weisset ovat vakiintuneita hapanoluttyyppejä. Tänä päivänä hapanolut tarkoittaa paluuta siis luonnonmukaiseen oluenvalmistukseen. Se tarkoittaa siirtymistä käytännössä vapaampaan mikrobitoimintaan, ja samalla hallittavuudeltaan haastavampaan valmistukseen. Nykyiset hapanoluet ovat esimerkiksi lactobacillus- ja brettanomyces-mikrobien puhdaskantojen aikaan saamia."
+        doubleFruitedSourTeksti = 'Double Fruited Sour on maitohappobakteerilla hapatettu olut. Mausteena käytetään runsaita määriä marjoja ja/tai hedelmiä (jopa yli 30% kokonaismäärästä). Mallaspohja yleensä Ohra- ja Vehnämallasta 50/50%, mutta usein käytetään myös kauraa pehmentämään suutuntumaa.'
+        indianPaleAleteksti = 'India Pale Lager on kepeä, raikas kansainvälinen lagertyyli, jonka panossa käytetään usein muutakin kuin ohramallasta, esim. maissia, riisiä tai vehnää. Hieman vahvemmin humaloitu kuin perinteiset Lager oluet. Humalina usein trooppisia makuja tuovia jenkki humalia.'
+        imperalStoutTeksti = 'Imperial Stout oli alkujaan stout-oluen vahva-alkoholinen vientiversio Baltiaan ja Venäjälle. Imperial stoutin maku on vivahteikas, paahtuneen suklainen, kahvinen, espressomainen ja jopa kevyesti palanut. Tuoksussa on karamellisuutta, tummaa marjaa, kaakaota, espressoa, mämmiä ja portviiniä. Alkoholi tuntuu, mutta se on lempeän lämmittävää.'
+        NEIPAteksti = 'Mehuisan hedelmäinen IPA -tyyli. Humaloinnissa panostetaan monesti miltei täysin kuivahumaloinnin hedelmäiseen makuprofiiliin, jossa katkerohumala on joko hyvin hennosti tuomassa makurunkoa tai kokonaan poissa. Monesti ulkonäkö voi olla lähellä tuoremehua.'
+        IPAAmericanTeksti = 'Amerikan länsirannikolta peräisin oleva IPA-tyyli, jossa kuivahumaloinnin lisäksi oluen keittovaiheessa tehdään lisähumalointi, joka tuo makuun greippistä sitrusta sekä havuisuutta.'
+        x = 0
+        //Luodaan luokka 'Olut', jonka attribuutit saavat arvonsa kyselyn tekijän vastauksista.
+        class Olut {
+            ABV = 0
+            Rating = 0
+            local = 0
+            constructor(a, b, c) {
+                this.ABV = a
+                this.Rating = b
+                this.local = c
+            }
+        }
+
+        //API koodi
+        var userName = "info@antbrew.fi";
+        var passWord = "dLq4afvW8ixRRRqyax4T";
+
+        function authenticateUser(user, password) {
+            var token = user + ":" + password;
+            
+            // Base64 Encoding -> btoa
+            var hash = btoa(token);
+
+            return "Basic " + hash;
+        }
+
+        function CallWebAPI() {
+            // New XMLHTTPRequest
+            var request = new XMLHttpRequest();
+            request.open("GET", "https://business.untappd.com/api/v1/sections/536449/items", false);
+            request.setRequestHeader("Authorization", authenticateUser(userName, passWord));
+            request.send();
+            var data = JSON.parse(request.responseText);
+            return data.items;
+        }
+
+        let saatavilla = CallWebAPI();
+        //API koodi
+
+        let olut = new Olut(0, 0, 0);  //luodaan olut olio, jolle annetaan vastauksien mukaiset arvot.
+
+        //funktio piilottaa "aloita kysely" napin ja näyttää kyselyn
+        function AloitaKysely() {
+            document.querySelector('form').hidden = false
+            document.querySelector('button').hidden = true
+            document.getElementById("kysely").style.visibility = "visible";
+            document.getElementById("button").style.visibility = "hidden";
+            VaihdaKysymykset(x);
+        }
+        //Funktio tarkastaa onko radio button painettu. Jos mikään radio button ei ole painettu niin kyselyssä ei päästä eteenpäin.
+        function valittuTarkistus() {
+            if (document.getElementById('option1').checked == true || document.getElementById('option2').checked == true || document.getElementById('option3').checked == true || document.getElementById('option4').checked == true) {
+                document.getElementById('submitButton').removeAttribute("disabled");
+                document.getElementById('submitButton').setAttribute("enabled", ""); //enabloi submit buttonin.
+            }
+            else {
+                document.getElementById('submitButton').setAttribute("disabled", "");
+                document.getElementById('submitButton').removeAttribute("enabled"); //disabloi submit buttonin.
+            }
+        }
+        //Funktio, joka laskee oluiden alc keskiarvon ja palauttaa sen.
+        function LaskeABVKeskiarvo(listax) {
+            let summa = 0
+            for (var i = 0; i < karsittuLista.length; i++) {
+                summa = summa + parseFloat(karsittuLista[i].abv)
+            }
+            summa = summa / karsittuLista.length
+            return summa
+        };
+        //Funktio, joka laskee oluiden rating keskiarvon ja palauttaa sen.
+        function LaskeRatingKeskiarvo(listax) {
+            let summa = 0
+            for (var i = 0; i < karsittuLista.length; i++) {
+                summa = summa + parseFloat(karsittuLista[i].rating)
+            }
+            summa = summa / karsittuLista.length
+
+            return summa
+        }
+        //Funktio toteutuu silloin kuin painetaan submit buttonia
+        function KäsitteleVastaus() {
+
+        // If Else rakenne, jossa tarkastetaan, mikä kysymys on vuorossa ja sen jälkeen tehdään kysymyksen numerosta riippuen eri toiminnot "option1,option2,option3,option4" painikkeisiin. Esim ensimmäinen kysymys määrittää minkä oluttyypin vastaaja saa.
+            if (x < kysely.length) {
+
+                if (document.getElementById("kysymys").innerHTML == kysely[0].kysymys) {
+
+                    karsittuLista = []; // Luodaan nimen mukaisesti karsittu lista, johon lisätään saatavilla olevista oluista vain asiakkaan valitun oluttyypin mukaiset oluet.
+                
+                    if (document.getElementById('option1').checked) {
+
+
+                        for (var i = 0; i < saatavilla.length; i++) {
+
+                            if (saatavilla[i].style.includes("Lager")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+                            else if (saatavilla[i].style.includes("Pilsner")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+                            else if (saatavilla[i].style.includes("Wheat Beer")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+
+                        }
+
+
+                    }
+                    else if (document.getElementById('option2').checked) {
+
+                        for (var i = 0; i < saatavilla.length; i++) {
+
+                            if (saatavilla[i].style.includes("IPA")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+                            else if (saatavilla[i].style.includes("Pale Ale")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+                            else if (saatavilla[i].style.includes("Wild Ale")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+                        }
+
+
+                    }
+                    else if (document.getElementById('option3').checked) {
+
+                        for (var i = 0; i < saatavilla.length; i++) {
+
+                            if (saatavilla[i].style.includes("Sour")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+                            else if (saatavilla[i].style.includes("IPA")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+                        }
+
+
+                    }
+                    else if (document.getElementById('option4').checked) {
+
+                        for (var i = 0; i < saatavilla.length; i++) {
+
+                            if (saatavilla[i].style.includes("Stout")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+                            else if (saatavilla[i].style.includes("Belgian Dubbel")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+                            else if (saatavilla[i].style.includes("Märzen")) {
+                                karsittuLista.push(saatavilla[i])
+                            }
+
+                        }
+                    }
+                    console.log('Oluttyypin mukaan karsittu lista:\n', karsittuLista)
+
+                    //Luodaan listoja, joiden avulla tarkastetaan, pystytäänkö arviointikriteerejä kysymään asiakkaalta.  Esim jos karsitussa listassa ei ole yhtäkään paikallista olutta, niin paikallisuuskuysymystä ei kysytä, koska se ei vaikuta lopputulokseen.
+                    yliKeskiarvoJaTasanABV = []
+                    alleKeskiarvoABV = []
+
+                    yliKeskiarvoRating = []
+                    alleKeskiarvoRating = []
+
+                    lahtelaiset = []
+                    eiLahtelaiset = []
+
+                    valmisLista = []
+
+                    //Jos olut tyypin avulla karsitussa listassa on vain yksi olut, niin se tulostetaan vastaukseksi.
+                    if (karsittuLista.length == 1) {
+                        valmisLista.push(karsittuLista[0])
+                    }
+
+                    for (var i = 0; i < karsittuLista.length; i++) {
+
+                        if (karsittuLista[i].abv < LaskeABVKeskiarvo(saatavilla)) {
+
+                            alleKeskiarvoABV.push(karsittuLista[i])
+                        }
+                        else if (karsittuLista[i].abv >= LaskeABVKeskiarvo(saatavilla)) {
+
+                            yliKeskiarvoJaTasanABV.push(karsittuLista[i])
+                        }
+                    }
+                    console.log('Karsittu lista sisältää ' + alleKeskiarvoABV.length+' olutta, joiden alc % on keskiarvoa pienempi.')
+                    console.log('Karsittu lista sisältää ' + yliKeskiarvoJaTasanABV.length+' olutta, joiden alc % on keskiarvoa suurempi.')
+                }
+                else if (document.getElementById("kysymys").innerHTML == kysely[1].kysymys) {
+                    if (document.getElementById('option1').checked) {
+
+                        olut.ABV++;
+                        console.log("Lisättiin abv piste")
+                    }
+                    else if (document.getElementById('option2').checked) {
+
+                        olut.ABV--;
+                        console.log("Vähennettiin abv piste")
+                    }
+
+                    //Jos olut tyypin avulla karsitussa listassa on vain yksi olut, niin se tulostetaan vastaukseksi
+                    if (karsittuLista.length == 1) {
+                        valmisLista.push(karsittuLista[0])
+                    }
+
+                    for (var i = 0; i < karsittuLista.length; i++) {
+
+                        if (karsittuLista[i].rating < LaskeRatingKeskiarvo(saatavilla)) {
+
+                            alleKeskiarvoRating.push(karsittuLista[i])
+                        }
+                        else if (karsittuLista[i].rating > LaskeRatingKeskiarvo(saatavilla)) {
+
+                            yliKeskiarvoRating.push(karsittuLista[i])
+                        }
+                    }
+
+                    console.log('Karsittu lista sisältää ' + alleKeskiarvoRating.length+' olutta, joiden rating-arvo on keskiarvoa pienempi.')
+                    console.log('Karsittu lista sisältää ' + yliKeskiarvoRating.length+' olutta, joiden rating-arvo on keskiarvoa suurempi.')
+
+                    // jos paikallisuus kyselyllä ei voida vaikuttaa lopputulokseen, sitä ei kysytä vaan kyselu lopetetaan
+                    if (alleKeskiarvoRating.length == 0) {
+                        for (var i = 0; i < karsittuLista.length; i++) {
+                            valmisLista.push(karsittuLista[i])
+                        }
+                    }
+                    if (yliKeskiarvoRating.length == 0) {
+                        for (var i = 0; i < karsittuLista.length; i++) {
+                            valmisLista.push(karsittuLista[i])
+                        }
+                    }
+                }
+                else if (document.getElementById("kysymys").innerHTML == kysely[2].kysymys) {
+                    if (document.getElementById('option1').checked) {
+
+                        olut.Rating++;
+                        console.log("Lisättiin rating piste")
+                    }
+                    else if (document.getElementById('option2').checked) {
+
+                        olut.Rating--;
+                        console.log("Vähennettiin rating piste")
+                    }
+                    //Jos olut tyypin avulla karsitussa listassa on vain yksi olut, niin se tulostetaan vastaukseksi
+                    if (karsittuLista.length == 1) {
+                        valmisLista.push(karsittuLista[0])
+                    }
+
+                    for (var i = 0; i < karsittuLista.length; i++) {
+
+
+                        if (karsittuLista[i].brewery_location == 'Lahti') {
+
+                            lahtelaiset.push(karsittuLista[i])
+                        }
+                        else {
+
+                            eiLahtelaiset.push(karsittuLista[i])
+                        }
+                    }
+                    console.log('Karsitun listan lahtelaiset oluet: ' + lahtelaiset.length)
+                    console.log('Karsitun listan oluet, jotka eivät ole lahtelaisia: ' + eiLahtelaiset.length)
+                }
+                else if (document.getElementById("kysymys").innerHTML == kysely[5].kysymys) {
+                    if (document.getElementById('option1').checked) {
+
+                        olut.local++;
+                        console.log("Lisättiin local piste")
+                    }
+                    else if (document.getElementById('option2').checked) {
+
+                        olut.local--;
+                        console.log("Vähennettiin local piste")
+                    }
+                }
+                else if (document.getElementById("kysymys").innerHTML == kysely[4].kysymys) {
+                    if (lahtelaiset.length == 0) {
+                        for (var i = 0; i < eiLahtelaiset.length; i++) {
+                            valmisLista.push(eiLahtelaiset[i])
+                        }
+                        LopetaKysely()
+                    }
+                    else if (eiLahtelaiset.length == 0) {
+                        for (var i = 0; i < karsittuLista.length; i++) {
+                            valmisLista.push(lahtelaiset[i])
+                        }
+                        LopetaKysely()
+                    }
+                }
+                //kutsutaan Funktioita
+                NollaaVastaukset();
+                x = x + 1
+                VaihdaKysymykset(x);
+            }
+        }
+
+        //Funktio nollaa html "radiot", niin, ettei mikään radio jää painettuun asentoon.
+        function NollaaVastaukset() {
+            const answers = document.getElementsByName("answer");
+            for (let i = 0; i < answers.length; i++) {
+                answers[i].checked = false;
+            }
+        }
+        //Funktio vaihtaa kysymykset ja vastaukset HTML tiedostosta.
+        function VaihdaKysymykset(x) {
+            valittuTarkistus();
+            try {
+                document.getElementById("kysymys").innerHTML = kysely[x].kysymys;
+                document.getElementById("option1Label").innerHTML = kysely[x].vastaus[0];
+                document.getElementById("option2Label").innerHTML = kysely[x].vastaus[1];
+                document.getElementById("option3Label").innerHTML = kysely[x].vastaus[2];
+                if (x > 0) {
+                    document.getElementById('option4').style.visibility = "hidden";
+                    document.getElementById('option4Label').style.visibility = "hidden";
+                    document.getElementById('option4Span').style.visibility = "hidden";
+                }
+                else {
+                    document.getElementById("option4Label").innerHTML = kysely[x].vastaus[3]
+
+                }
+            } catch (error) {
+                LopetaKysely()
+            }
+        }
+        function LopetaKysely() {
+            //kyselyn loputtua piilotetaan "aloita kysely"-nappi,"form"-kyselypohja ja näytetään molemmat div elementit, joissa toisessa lukee "Kysely loppui" ja toisessa vastausten mukaiset tiedot 
+            document.querySelector('button').hidden = true
+            document.querySelector('form').hidden = true
+            document.querySelector('div').hidden = false
+            document.getElementById('loppuPalaute').style.visibility = "visible";
+            document.getElementById('palauteMaster').style.visibility = "visible";
+            document.getElementById('kysely').style.visibility = "hidden";
+            document.getElementById('olutKuva').style.visibility = "visible";
+            document.getElementById('olutTyyppiPalaute').style.visibility = "visible";
+            document.getElementById('loppuPalauteKuvaus').style.visibility = "visible";
+            document.getElementById('tastingButton').style.visibility = "visible";
+            console.log("ABV: " + olut.ABV, "\nRating: " + olut.Rating, "\nLocal: ", olut.local)
+
+            //Tässä If Else osiossa tarkastetaan Olut olion attribuutit, jotka ovat saaneet arvonsa kyselyn tekijän vastausten mukaisesti.
+            if (olut.ABV == -1 && olut.Rating == -1 && olut.local == -1) {
+                for (var i = 0; i < karsittuLista.length; i++) {
+
+                    if (parseInt(karsittuLista[i].abv) < LaskeABVKeskiarvo(saatavilla) && parseFloat(karsittuLista[i].rating) < LaskeRatingKeskiarvo(saatavilla) && karsittuLista[i].brewery_location != 'Lahti') {
+                        valmisLista.push(karsittuLista[i])
+                    }
+                }
+            }
+            else if (olut.ABV == -1 && olut.Rating == -1 && olut.local == 1) {
+                for (var i = 0; i < karsittuLista.length; i++) {
+
+                    if (parseInt(karsittuLista[i].abv) < LaskeABVKeskiarvo(saatavilla) && parseFloat(karsittuLista[i].rating) < LaskeRatingKeskiarvo(saatavilla) && karsittuLista[i].brewery_location == 'Lahti') {
+                        valmisLista.push(karsittuLista[i])
+                    }
+                }
+            }
+            else if (olut.ABV == 1 && olut.Rating == 1 && olut.local == 1) {
+                for (var i = 0; i < karsittuLista.length; i++) {
+
+                    if (parseInt(karsittuLista[i].abv) > LaskeABVKeskiarvo(saatavilla) && parseFloat(karsittuLista[i].rating) > LaskeRatingKeskiarvo(saatavilla) && karsittuLista[i].brewery_location == 'Lahti') {
+                        valmisLista.push(karsittuLista[i])
+                    }
+                }
+            }
+            else if (olut.ABV == -1 && olut.Rating == 1 && olut.local == 1) {
+                for (var i = 0; i < karsittuLista.length; i++) {
+
+                    if (parseInt(karsittuLista[i].abv) < LaskeABVKeskiarvo(saatavilla) && parseFloat(karsittuLista[i].rating) > LaskeRatingKeskiarvo(saatavilla) && karsittuLista[i].brewery_location == 'Lahti') {
+                        valmisLista.push(karsittuLista[i])
+                    }
+                }
+            }
+            else if (olut.ABV == 1 && olut.Rating == -1 && olut.local == 1) {
+                for (var i = 0; i < karsittuLista.length; i++) {
+
+                    if (parseInt(karsittuLista[i].abv) > LaskeABVKeskiarvo(saatavilla) && parseFloat(karsittuLista[i].rating) < LaskeRatingKeskiarvo(saatavilla) && karsittuLista[i].brewery_location == 'Lahti') {
+                        valmisLista.push(karsittuLista[i])
+                    }
+                }
+            }
+            else if (olut.ABV == 1 && olut.Rating == 1 && olut.local == -1) {
+                for (var i = 0; i < karsittuLista.length; i++) {
+
+                    if (parseInt(karsittuLista[i].abv) > LaskeABVKeskiarvo(saatavilla) && parseFloat(karsittuLista[i].rating) > LaskeRatingKeskiarvo(saatavilla) && karsittuLista[i].brewery_location != 'Lahti') {
+                        valmisLista.push(karsittuLista[i])
+                    }
+                }
+            }
+            else if (olut.ABV == -1 && olut.Rating == 1 && olut.local == -1) {
+                for (var i = 0; i < karsittuLista.length; i++) {
+
+                    if (parseInt(karsittuLista[i].abv) < LaskeABVKeskiarvo(saatavilla) && parseFloat(karsittuLista[i].rating) > LaskeRatingKeskiarvo(saatavilla) && karsittuLista[i].brewery_location != 'Lahti') {
+                        valmisLista.push(karsittuLista[i])
+                    }
+                }
+            }
+            else if (olut.ABV == 1 && olut.Rating == -1 && olut.local == -1) {
+                for (var i = 0; i < karsittuLista.length; i++) {
+
+                    if (parseInt(karsittuLista[i].abv) > LaskeABVKeskiarvo(saatavilla) && parseFloat(karsittuLista[i].rating) < LaskeRatingKeskiarvo(saatavilla) && karsittuLista[i].brewery_location != 'Lahti') {
+                        valmisLista.push(karsittuLista[i])
+                    }
+                }
+            }
+            else {
+                console.log("Error")
+            }
+
+            //Luodaan random numero ja käytetään sitä oluen valitsemisessa, jos karsitussa listassa on enemmän, kuin yksi olut.
+            randomNumber = Math.floor(Math.random() * valmisLista.length + 1)           
+            console.log('Olut:\n', valmisLista[randomNumber - 1])
+            document.getElementById('loppuPalaute').innerHTML = valmisLista[randomNumber - 1].name;
+            document.getElementById('loppuPalauteKuvaus').innerHTML = valmisLista[randomNumber - 1].description;
+            document.getElementById("olutKuva").src = valmisLista[randomNumber - 1].label_image_hd;
+
+            //Lisätään palautukseen oikea lopputeksti riippuen siitä, mikä oluttyyppi olut on. Esim jos loppupalautteeseen tulee "Sour"-olut, niin lopputekstiin tulee Karin kirjoittama teksti "Sour"-tyyppisistä oluista.
+            if (valmisLista[randomNumber - 1].original_style.includes("Lager - IPL (India Pale Lager)")) {
+                document.getElementById("olutTyyppiPalaute").innerHTML = indianPaleAleteksti;
+            }
+            else if (valmisLista[randomNumber - 1].original_style.includes("IPA - New England")) {
+                document.getElementById("olutTyyppiPalaute").innerHTML = NEIPAteksti;
+            }
+            else if (valmisLista[randomNumber - 1].original_style.includes('IPA - American')) {
+                document.getElementById("olutTyyppiPalaute").innerHTML = IPAAmericanTeksti;
+            }
+            else if (valmisLista[randomNumber - 1].original_style.includes("Stout - Imperial")) {
+                document.getElementById("olutTyyppiPalaute").innerHTML = imperalStoutTeksti;
+            }
+            else if (valmisLista[randomNumber - 1].original_style.includes("Lager")) {
+                document.getElementById("olutTyyppiPalaute").innerHTML = LagerTeksti;
+            }
+            else if (valmisLista[randomNumber - 1].original_style.includes("Sour - Fruited")) {
+                document.getElementById("olutTyyppiPalaute").innerHTML = doubleFruitedSourTeksti;
+            }
+            else if (valmisLista[randomNumber - 1].original_style.includes("Pale Ale")) {
+                document.getElementById("olutTyyppiPalaute").innerHTML = PaleAleTeksti;
+            }
+        }
+    </script>
+</header>
+<style>
+    body {
+        height: 50vh;
+    }
+
+    @font-face {
+        font-family: 'LuloCleanW01-OneBold';
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+        font-variant: normal;
+        src: url('https://fontsfree.net//wp-content/fonts/basic/sans-serif/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf') format('truetype');
+    }
+
+    .button {
+        animation: fadeIn 1s;
+        width: 70%;
+        max-width: 500px;
+        outline: 0;
+        border: #222;
+        color: #222;
+        cursor: pointer;
+        border-radius: 0px;
+        min-width: 200px;
+        height: 8vh;
+        font-size: 18px;
+        margin-top: 15vh;
+        background-color: #F9C520;
+        transition-duration: 500ms;
+        font-family: 'LuloCleanW01-OneBold';
+    }
+
+    .button:hover {
+        background-color: #c999c2;
+        border: #222;
+    }
+
+    .button2 {
+        animation: fadeIn 1s;
+        width: 50%;
+        border: #222;
+        color: #222;
+        cursor: pointer;
+        height: 50px;
+        font-size: 12px;
+        background-color: #EFD3E4;
+        transition-duration: 500ms;
+        font-family: 'LuloCleanW01-OneBold';
+    }
+
+    .button2:hover {
+        background-color: #c999c2;
+        border: #222;
+    }
+
+    .tastingButtonContainer {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        width: fit-content;
+        margin-bottom: 2vh;
+        margin-left: 2vh;
+        margin-right: 2vh;
+
+    }
+
+    .tastingButton {
+        animation: fadeIn 1s;
+        width: 80%;
+        height: 8vh;
+        border: #222;
+        cursor: pointer;
+        font-size: 14px;
+        background-color: #EFD3E4;
+        transition-duration: 500ms;
+        color: #222;
+        font-family: 'LuloCleanW01-OneBold';
+    }
+
+    .tastingButton:hover {
+        background-color: #c999c2;
+        border: #222;
+    }
+
+
+    .kysely {
+        animation: fadeIn 1s;
+        background-color: #F9C520;
+        border: #222;
+        font-family: sans-serif;
+        border: #222;
+        cursor: pointer;
+        font-size: 16px;
+        border: #222;
+        color: #222;
+        width: 90vw;
+        max-width: 750px;
+        font-family: 'LuloCleanW01-OneBold';
+        text-align: center;
+    }
+
+    .ans:hover {
+        background-color: #c999c2;
+        border: #222;
+    }
+
+    .kysymys {
+        font-weight: 500;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        font-size: 14px;
+    }
+
+    .palauteMaster {
+        animation: fadeIn 1s;
+        transition-duration: 500ms;
+        background-color: #F9C520;
+        margin: auto;
+        width: 100%;
+        max-width: 850px;
+        border: #222;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        color: #222;
+        font-family: 'LuloCleanW01-OneBold';
+        text-align: center;
+    }
+
+    .loppuPalaute {
+        animation: fadeIn 1s;
+        margin: auto;
+        padding: 0 20px;
+        margin-top: 5px;
+        font-size: 20px;
+        font-family: 'LuloCleanW01-OneBold';
+    }
+     .loppuPalauteKuvaus {
+        animation: fadeIn 1s;
+        margin: auto;
+        padding: 0 20px;
+        margin-top: 5px;
+        font-size: 14px;
+        font-family: 'LuloCleanW01-OneBold';
+    }
+
+    .loppuPalauteTeksti {
+        animation: fadeIn 1s;
+        padding: 0 2vw;
+        margin-top: 5px;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 2vh;
+        font-family: 'LuloCleanW01-OneBold';
+    }
+
+    .kysyText {
+        animation: fadeIn 1s;
+        font-size: 18px;
+        margin-bottom: 2vh;
+        font-family: 'LuloCleanW01-OneBold';
+    }
+
+    .olutKuva {
+        animation: fadeIn 1s;
+        background-color: #F9C520;
+        margin-top: 8px;
+        border: #222;
+        height: 50%;
+        width: 50%;
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .varaaTasting {
+        animation: fadeIn 1s;
+        font-size: 12px;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
+    .game-quiz-container {
+        animation: fadeIn 1s;
+        margin-bottom: 3vh;
+    }
+
+    .game-options-container {
+        animation: fadeIn 1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: auto;
+        gap: 7px;
+    }
+
+    .game-options-container span {
+        animation: fadeIn 1s;
+        width: 90%;
+        max-width: 450px;
+        height: 3rem;
+        border-radius: 2%;
+        transition-duration: 500ms;
+        overflow: hidden;
+    }
+
+    span label {
+        animation: fadeIn 1s;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 12px;
+        color: rgb(22, 22, 22);
+        background-color: #EFD3E4;
+
+    }
+
+    span label:hover {
+        background-color: #c999c2;
+        border: #222;
+    }
+
+    input[type="radio"] {
+        animation: fadeIn 1s;
+        position: relative;
+        display: none;
+    }
+
+    input[type=radio]:checked~.option {
+        animation: fadeIn 1s;
+        background: #c999c2;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+
+<body>
+    <!--button on ainut elementti joka näkyy kun kysely aloitetaan ja kun sitä painaa niin button häviää ja itse kysely tulee näkyviin -->
+
+    <!--form elementti sisältää itse kyselyn html-koodin-->
+    <div class="container">
+        <button id="button" class="button" style="visibility: visible;" onclick=AloitaKysely()>Aloita kysely</button>
+        <form id="kysely" class="kysely" style="visibility: hidden;" hidden="true">
+            <p id="kysymys" class="kysymys"></p>
+
+            <div class="game-quiz-container">
+
+                <div class="game-options-container">
+
+                    <span onclick="valittuTarkistus()">
+                        <input type="radio" id="option1" name="answer" class="radio" />
+                        <label for="option1" class="option" id="option1Label"></label>
+                    </span>
+
+                    <span onclick="valittuTarkistus()">
+                        <input type="radio" id="option2" name="answer" class="radio" />
+                        <label for="option2" class="option" id="option2Label"></label>
+                    </span>
+
+                    <span onclick="valittuTarkistus()">
+                        <input type="radio" id="option3" name="answer" class="radio" />
+                        <label for="option3" class="option" id="option3Label"></label>
+                    </span>
+
+                    <span id="option4Span" style="visibility: visible;" onclick="valittuTarkistus()">
+                        <input type="radio" id="option4" name="answer" class="radio" style="visibility: visible;" />
+                        <label for="option4" class="option" id="option4Label" style="visibility: visible;"></label>
+                    </span>
+                    <br>
+                    <button type="button" class="button2" id="submitButton" onclick="KäsitteleVastaus()"
+                        disabled>Seuraava</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="palauteMaster" id="palauteMaster" style="visibility: hidden;">
+        <!--div elementti ilmestyy kun kyselyn kysymykset loppuvat-->
+        <div hidden="true">Kysely loppui</div>
+        <h2 id="loppuPalaute" class="loppuPalaute" style="visibility: hidden;"></h2>
+        <h4 id="loppuPalauteKuvaus" class="loppuPalauteKuvaus" style="visibility: hidden;"></h4>
+        <img id="olutKuva" class="olutKuva" src="" alt="Oluen kuva" style="visibility: hidden">
+
+        <div id="olutTyyppiPalaute" class="loppuPalauteTeksti" style="visibility: hidden;"></div>
+        <div id="kysyText" class="kysyText">Kysy henkilökunnalta maistiaisia!</div>
+        <div id="tastingButton" class="tastingButtonContainer" style="visibility: hidden;">
+            <!--p class="varaaTasting">Varaa tasting tästä!</p--><!--Kevyt tasting linkki-->
+            <button type="button" class="tastingButton" id="tastingButton" onclick="window.location.href='https://forms.gle/ZJ7WkVzK572mLGcp8';">Varaa tasting tästä!</button>
+        </div>
+    </div>
+</body>
