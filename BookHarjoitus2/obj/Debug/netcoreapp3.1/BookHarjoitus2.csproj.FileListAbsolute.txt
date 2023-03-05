@@ -1,0 +1,14 @@
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\bin\Debug\netcoreapp3.1\BookHarjoitus2.exe
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\bin\Debug\netcoreapp3.1\BookHarjoitus2.deps.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\bin\Debug\netcoreapp3.1\BookHarjoitus2.runtimeconfig.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\bin\Debug\netcoreapp3.1\BookHarjoitus2.runtimeconfig.dev.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\bin\Debug\netcoreapp3.1\BookHarjoitus2.dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\bin\Debug\netcoreapp3.1\BookHarjoitus2.pdb
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\obj\Debug\netcoreapp3.1\BookHarjoitus2.csproj.AssemblyReference.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\obj\Debug\netcoreapp3.1\BookHarjoitus2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\obj\Debug\netcoreapp3.1\BookHarjoitus2.AssemblyInfoInputs.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\obj\Debug\netcoreapp3.1\BookHarjoitus2.AssemblyInfo.cs
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\obj\Debug\netcoreapp3.1\BookHarjoitus2.csproj.CoreCompileInputs.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\obj\Debug\netcoreapp3.1\BookHarjoitus2.dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\obj\Debug\netcoreapp3.1\BookHarjoitus2.pdb
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\BookHarjoitus2\obj\Debug\netcoreapp3.1\BookHarjoitus2.genruntimeconfig.cache
