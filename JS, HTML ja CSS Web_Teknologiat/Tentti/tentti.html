@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentti</title>
+
+
+    <link rel="stylesheet" href="tentti.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="kokopaska">
+        <div class="otsikko">
+            <h2>Vuokraa kanootti</h2>
+        </div>
+
+        <div class="kuva">
+            <img src="kuvat/kanootti.jpg" alt="kanootti" width="700px" height="400px">
+        </div>
+
+        <div class="kanootinInfo">
+            <i class="bi bi-info-circle" onclick="NäytäInfo()">Kanootti</i>
+        </div>
+
+        <div class="infoTeksti" id="infoTeksti">
+            <p> Kanootti on vihreä ja musta ja se on saanut paljon kehuja
+                plaaplaaaaplaaplaa..... </p>
+        </div>
+
+
+        <div class="alaosa">
+            <div class="dropdownJaTeksti">
+                Palvelu
+                <input type="text" value="Valitse palvelu" id="tekstikenttä" class="palvelukenttä">
+
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><button class="dropdown-item" onclick="ValitsePalvelu2(),LaskeHinta()">Pikavuokraus 2h</button>
+                    </li>
+                    <li><button class="dropdown-item" onclick="ValitsePalvelu8(),LaskeHinta()">Päivävuokraus 8h</button>
+                    </li>
+                    <li><button class="dropdown-item" onclick="ValitsePalvelu19(),LaskeHinta()">Vuorokausivuokra
+                            19h</button></li>
+                    <li><button class="dropdown-item" onclick="ValitsePalveluPesu(),LaskeHinta()">Viikonloppuvuokra
+                            pe-su</button></li>
+                </ul>
+            </div>
+            <div class="kanoottienMäärä">
+                Kanoottien määrä
+
+                <button class="btn btn-primary" onclick="Miinus(),LaskeHinta()"><i
+                        class="bi bi-dash-circle"></i></button>
+
+                <input type="number" value="0" id="numerokenttä" class="numerokenttä">
+
+                <button class="btn btn-primary" onclick="Plus(),LaskeHinta()"><i class="bi bi-plus-circle"></i></button>
+
+
+
+            </div>
+
+            <div class="hinta">
+
+                Hinta yhteensä
+                <input type="number" value="0" id="hintasarake" class="hintasarake">
+            </div>
+
+            <div class="varaa">
+                <button class="btn btn-primary" onclick="Nollaa()">Varaa</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="tentti.js"></script>
+</body>
+
+</html>
