@@ -1,0 +1,14 @@
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\bin\Debug\netcoreapp3.1\Interface(Rajapinta).exe
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\bin\Debug\netcoreapp3.1\Interface(Rajapinta).deps.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\bin\Debug\netcoreapp3.1\Interface(Rajapinta).runtimeconfig.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\bin\Debug\netcoreapp3.1\Interface(Rajapinta).runtimeconfig.dev.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\bin\Debug\netcoreapp3.1\Interface(Rajapinta).dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\bin\Debug\netcoreapp3.1\Interface(Rajapinta).pdb
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\obj\Debug\netcoreapp3.1\Interface(Rajapinta).csproj.AssemblyReference.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\obj\Debug\netcoreapp3.1\Interface(Rajapinta).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\obj\Debug\netcoreapp3.1\Interface(Rajapinta).AssemblyInfoInputs.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\obj\Debug\netcoreapp3.1\Interface(Rajapinta).AssemblyInfo.cs
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\obj\Debug\netcoreapp3.1\Interface(Rajapinta).csproj.CoreCompileInputs.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\obj\Debug\netcoreapp3.1\Interface(Rajapinta).dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\obj\Debug\netcoreapp3.1\Interface(Rajapinta).pdb
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\Interface(Rajapinta)\obj\Debug\netcoreapp3.1\Interface(Rajapinta).genruntimeconfig.cache

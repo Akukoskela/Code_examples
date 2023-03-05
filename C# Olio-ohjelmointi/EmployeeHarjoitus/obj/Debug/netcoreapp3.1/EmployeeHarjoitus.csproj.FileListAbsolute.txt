@@ -1,0 +1,14 @@
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\bin\Debug\netcoreapp3.1\EmployeeHarjoitus.exe
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\bin\Debug\netcoreapp3.1\EmployeeHarjoitus.deps.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\bin\Debug\netcoreapp3.1\EmployeeHarjoitus.runtimeconfig.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\bin\Debug\netcoreapp3.1\EmployeeHarjoitus.runtimeconfig.dev.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\bin\Debug\netcoreapp3.1\EmployeeHarjoitus.dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\bin\Debug\netcoreapp3.1\EmployeeHarjoitus.pdb
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\obj\Debug\netcoreapp3.1\EmployeeHarjoitus.csproj.AssemblyReference.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\obj\Debug\netcoreapp3.1\EmployeeHarjoitus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\obj\Debug\netcoreapp3.1\EmployeeHarjoitus.AssemblyInfoInputs.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\obj\Debug\netcoreapp3.1\EmployeeHarjoitus.AssemblyInfo.cs
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\obj\Debug\netcoreapp3.1\EmployeeHarjoitus.csproj.CoreCompileInputs.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\obj\Debug\netcoreapp3.1\EmployeeHarjoitus.dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\obj\Debug\netcoreapp3.1\EmployeeHarjoitus.pdb
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\EmployeeHarjoitus\obj\Debug\netcoreapp3.1\EmployeeHarjoitus.genruntimeconfig.cache
