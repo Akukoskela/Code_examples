@@ -1,0 +1,103 @@
+<div class="kaikki">
+    <h1>Registeration Form</h1>
+
+    <form [formGroup]="profileForm">
+
+        <mat-form-field appearance="fill">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="First name" formControlName="firstName">
+
+            <mat-error *ngIf="firstName?.hasError('required')"> Enter your first name </mat-error>
+            <mat-error *ngIf="firstName?.hasError('minlength')"> Minimium 2 characters </mat-error>
+            <mat-error *ngIf="firstName?.hasError('pattern')">Must be valid name</mat-error>
+
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="Last name" formControlName="lastName">
+
+            <mat-error *ngIf="lastName?.hasError('required')"> Enter your last name </mat-error>
+            <mat-error *ngIf="lastName?.hasError('minlength')">Minimiun 2 characters</mat-error>
+            <mat-error *ngIf="lastName?.hasError('pattern')">Must be valid name</mat-error>
+
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" formControlName="username">
+
+            <mat-error *ngIf="username?.hasError('required')"> Enter your username </mat-error>
+            <mat-error *ngIf="username?.hasError('minlength')">Minimiun 6 characters</mat-error>
+            <mat-error *ngIf="username?.hasError('pattern')">Must be valid name</mat-error>
+
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email">
+
+            <mat-error *ngIf="email?.hasError('required')"> Enter your email </mat-error>
+            <mat-error *ngIf="email?.hasError('minlength')">Minimiun 3 characters</mat-error>
+            <mat-error *ngIf="email?.hasError('pattern')">Must be valid email</mat-error>
+
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Person ID</mat-label>
+            <input matInput placeholder="PersonId" formControlName="personId">
+
+            <mat-error *ngIf="personId?.hasError('required')"> Enter your person Id </mat-error>
+            <mat-error *ngIf="personId?.hasError('minlength')">Must be 11 characters</mat-error>
+            <mat-error *ngIf="personId?.hasError('pattern')">Must be valid Id</mat-error>
+
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Password" formControlName="password">
+
+            <mat-error *ngIf="password?.hasError('required')"> Enter your password </mat-error>
+            <mat-error *ngIf="password?.hasError('minlength')">Minimiun 10 characters</mat-error>
+            <mat-error *ngIf="password?.hasError('pattern')">Must be at least 1 capital and 1 number</mat-error>
+
+        </mat-form-field>
+        <br>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Password again</mat-label>
+            <input matInput type="password" placeholder="Password2" formControlName="password2"
+                pattern="{{password?.value}}">
+
+            <mat-error *ngIf="password2?.hasError('required')"> Enter your password </mat-error>
+
+            <mat-error *ngIf="password2?.hasError('pattern')">Must be same password</mat-error>
+
+        </mat-form-field>
+
+        <br>
+        <mat-form-field>
+            <input hidden=true matInput>
+            <mat-checkbox matInput formControlName="checkbox"> Hyväksy</mat-checkbox>
+        </mat-form-field>
+
+
+        <br>
+
+        <button (click)="onSubmit()" [disabled]="!profileForm.valid"> submit</button>
+
+    </form>
+
+</div>

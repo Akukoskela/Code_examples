@@ -1,0 +1,29 @@
+<div class="kaikki">
+    <h1>Laskin</h1>
+
+    <div class="näyttö">
+
+        <input type="string" value="{{result}}" id="näyttö">
+        <!--laskimen näyttö-->
+
+    </div>
+
+    <br>
+
+    <mat-grid-list cols="4" rowHeight="50px">
+        <div *ngFor="let button of buttons; index as i;" class="moi">
+
+
+
+            <mat-grid-tile><button (click)="ButtonClicked(button)" mat-raised-button>{{button}}</button></mat-grid-tile>
+            <!--käytetään *ngfor objectia(eimitään hajua mikä se on) ja laitetaan sen avulla laskimen numerot ja muut näppäimet näkyville. Käytetään myös mat grid hommelia että saadaan grid ja myös lisätään hienommat button painikkeet-->
+
+
+        </div>
+    </mat-grid-list>
+
+
+
+
+
+</div>

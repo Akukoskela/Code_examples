@@ -1,0 +1,40 @@
+<h1>Finnkinon uutiset</h1>
+<br>
+
+<mat-accordion class="container">
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label matInput placeholder="Kirjoita hakusana">Kirjoita hakusana</mat-label>
+            <input [(ngModel)]="searchText" matInput placeholder="Hae uutisen otsikkoa">
+            <mat-icon matSuffix> search</mat-icon>
+        </mat-form-field>
+    </p>
+
+    <div class="paneeli">
+
+        <mat-accordion>
+            <mat-expansion-panel hideToggle *ngFor="let item of cinemaData$ | async | pipeName: searchText">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{item.Title}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Julkaisupäivä: {{item.PublishDate}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <img src="{{item.ImageURL}}" alt="" width="500px"> <br> <br>{{item.HTMLLead}}
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Self aware panel
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+    </div>

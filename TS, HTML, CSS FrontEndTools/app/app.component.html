@@ -1,0 +1,75 @@
+<mat-toolbar>
+    <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>list</mat-icon>
+
+
+    </button>
+    Front-end tools
+    <div class="toolbarLogin">
+        <a routerLink="/login" routerLinkActive="active"><button mat-stroked-button>Sign in</button>
+        </a>
+    </div>
+</mat-toolbar>
+
+
+
+
+<mat-menu #menu="matMenu">
+
+    <div class="routerItem">
+        <a routerLink="" routerLinkActive="active"><button mat-raised-button>
+                <mat-icon>home</mat-icon> Home
+            </button></a>
+    </div>
+
+    <div class="routerItem">
+        <a routerLink="/hello-world" routerLinkActive="active"><button mat-raised-button>
+                <mat-icon>developer_mode</mat-icon> Hello world!
+            </button></a>
+    </div>
+
+    <div class="routerItem">
+        <a routerLink="/calculator" routerLinkActive="active"><button mat-raised-button><i
+                    class="fas fa-calculator"></i>
+                <mat-icon>exposure_plus_1</mat-icon> Calculator
+            </button></a>
+    </div>
+
+    <div class="routerItem">
+        <a routerLink="/feedback" routerLinkActive="active"><button mat-raised-button>
+                <mat-icon>feedback</mat-icon> Feedback
+            </button></a>
+    </div>
+
+    <div class="routerItem">
+        <a routerLink="/templateDrivenForm" routerLinkActive="active"><button mat-raised-button>
+                <mat-icon>text_format</mat-icon> Template driven
+                form
+            </button></a>
+    </div>
+
+    <div class="routerItem">
+        <a routerLink="/reactive-form" routerLinkActive="active"><button mat-raised-button>
+                <mat-icon>text_format</mat-icon> Reactive form
+            </button></a>
+    </div>
+
+
+    <div class="routerItem">
+        <a routerLink="/cinema" routerLinkActive="active"><button mat-raised-button>
+                <mat-icon>movie</mat-icon> Cinema
+            </button></a>
+    </div>
+
+
+
+
+
+
+
+</mat-menu>
+
+
+
+
+<router-outlet></router-outlet>

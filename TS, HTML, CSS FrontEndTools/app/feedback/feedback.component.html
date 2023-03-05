@@ -1,0 +1,21 @@
+<div class="kaikki">
+    <h1>Feedback</h1>
+
+    <div *ngFor="let question of questions">{{question.name}}
+
+        <br>
+
+        <mat-slider aria-label="unit(s)" (input)="OnInputChange($event,question)" min="0" max="3" value="0">
+        </mat-slider>
+        {{question.vastaus}}
+
+
+
+    </div>
+
+
+
+
+
+
+</div>

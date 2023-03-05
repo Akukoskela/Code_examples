@@ -1,0 +1,20 @@
+<div class="kaikki">
+
+
+    <h1>{{ otsikko }}</h1>
+
+    <img [src]="itemImageURL" alt="plääh" width="500px" height="300px">
+
+    <br>
+
+    <button mat-raised-button color="primary" (click)="oneButtonClicked();">Vaihda kuvaa</button>
+
+
+    <mat-slider aria-label="unit(s)"></mat-slider>
+
+    <input [(ngModel)]="otsikko">
+
+    <input [(ngModel)]="testi">
+
+    <p>{{testi}}</p>
+</div>

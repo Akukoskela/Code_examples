@@ -1,0 +1,24 @@
+<div class="kaikki">
+
+  <h1>Login to admin view</h1>
+  <br>
+  <br>
+
+  <mat-form-field appearance="fill" id="email">
+    <mat-label>Email</mat-label>
+    <input matInput [(ngModel)]="email">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill" id="password">
+    <mat-label>Password</mat-label>
+    <input matInput [(ngModel)]="password" type="password">
+  </mat-form-field>
+
+  <br>
+
+  <button (click)="loginButtonClicked()" mat-raised-button>Login</button>
+
+  <button (click)="cancelButtonClicked()" mat-button>Cancel</button>
+
+</div>
