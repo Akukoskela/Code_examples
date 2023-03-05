@@ -1,0 +1,3 @@
+Here is the final code that I made in course named React.js fundamentals. It uses "Firebase" backend infrastructure to create and manage realtime database. It's a simple website which allows you to see books that are in the database, create new books and delete books from the database. 
+//
+Tässä kansiossa on viimeisin koodi jonka tein kurssilla React.js fundamentals. Se käyttää "Firebase" backend infrastruktuuria luomaan ja hallinnoimaan realiaikaista tietokantaa. Itse koodi on yksinkertainen nettisivu, jonka avulla käyttäjä näkee kirjat, jotka ovat tietokannassa. Käyttäjä voi myös lisätä ja poistaa kirjoja tietokannasta nettisivun kautta. 
