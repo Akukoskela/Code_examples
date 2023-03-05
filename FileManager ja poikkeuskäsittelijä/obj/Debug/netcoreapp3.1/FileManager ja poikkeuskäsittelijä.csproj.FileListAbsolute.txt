@@ -1,0 +1,16 @@
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\bin\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.exe
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\bin\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.deps.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\bin\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.runtimeconfig.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\bin\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.runtimeconfig.dev.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\bin\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\bin\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.pdb
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\obj\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.csproj.AssemblyReference.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\obj\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\obj\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.AssemblyInfoInputs.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\obj\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.AssemblyInfo.cs
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\obj\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.csproj.CoreCompileInputs.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\obj\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\obj\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.pdb
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\obj\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.genruntimeconfig.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\FileManager ja poikkeuskäsittelijä\obj\Debug\netcoreapp3.1\FileManager ja poikkeuskäsittelijä.csproj.CopyComplete

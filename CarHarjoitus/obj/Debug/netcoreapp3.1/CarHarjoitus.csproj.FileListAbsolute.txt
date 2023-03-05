@@ -1,0 +1,14 @@
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\bin\Debug\netcoreapp3.1\CarHarjoitus.exe
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\bin\Debug\netcoreapp3.1\CarHarjoitus.deps.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\bin\Debug\netcoreapp3.1\CarHarjoitus.runtimeconfig.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\bin\Debug\netcoreapp3.1\CarHarjoitus.runtimeconfig.dev.json
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\bin\Debug\netcoreapp3.1\CarHarjoitus.dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\bin\Debug\netcoreapp3.1\CarHarjoitus.pdb
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\obj\Debug\netcoreapp3.1\CarHarjoitus.csproj.AssemblyReference.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\obj\Debug\netcoreapp3.1\CarHarjoitus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\obj\Debug\netcoreapp3.1\CarHarjoitus.AssemblyInfoInputs.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\obj\Debug\netcoreapp3.1\CarHarjoitus.AssemblyInfo.cs
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\obj\Debug\netcoreapp3.1\CarHarjoitus.csproj.CoreCompileInputs.cache
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\obj\Debug\netcoreapp3.1\CarHarjoitus.dll
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\obj\Debug\netcoreapp3.1\CarHarjoitus.pdb
+C:\Users\sk\OneDrive\Documents\Kouluhommat\OlioOhjelmoinnin perusteet\Tehtävät\CarHarjoitus\obj\Debug\netcoreapp3.1\CarHarjoitus.genruntimeconfig.cache
