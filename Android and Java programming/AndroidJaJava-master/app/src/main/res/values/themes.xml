@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AndroidJaJava" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ilvesKeltainen</item>
+        <item name="textOutlineColor">@color/ilvesVihreä</item>
+        <item name="colorPrimaryVariant">@color/ilvesVihreä</item>
+        <item name="colorOnPrimary">@color/ilvesVihreä</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/ilvesVihreä</item>
+        <item name="colorSecondaryVariant">@color/ilvesVihreä</item>
+        <item name="colorOnSecondary">@color/ilvesVihreä</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/black</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.AndroidJaJava.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AndroidJaJava.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AndroidJaJava.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

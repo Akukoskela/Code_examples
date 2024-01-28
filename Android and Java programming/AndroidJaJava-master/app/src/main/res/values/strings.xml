@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Ilves 2023</string>
+    <string name="starter_text">Hello</string>
+    <string name="button">START</string>
+    <string name="buttonPeli">Minigame</string>
+    <string name="textViewPeli">Find the next Liiga champion!</string>
+    <string name="textViewPalaute">You found the champions!</string>
+    <string name="buttonUudestaan">Play again</string>
+    <string name="buttonTakaisin">Back to front page</string>
+    <string name="title_activity_bottom_navigation">BottomNavigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="pisteet">Tries:</string>
+    <string name="buttonNäytäSijainti">Show location</string>
+    <string name="outlinedTextField">Latitude</string>
+    <string name="outlinedTextField2">Longitude</string>
+    <string name="outlinedTextField3">Address</string>
+    <string name="buttonHaeSijainti">Show location</string>
+    <string name="startButton">Start</string>
+    <string name="stoptButton">Stop</string>
+    <string name="pauseButton">Pause</string>
+    <string name="timerStopText">Done</string>
+    <string name="airplaneModeOn">Airplane mode is on! </string>
+    <string name="airplaneModeOff">Airplane mode is not on! </string>
+    <string name="searchButton">Search</string>
+    <string name="editText">Write company name here</string>
+</resources>

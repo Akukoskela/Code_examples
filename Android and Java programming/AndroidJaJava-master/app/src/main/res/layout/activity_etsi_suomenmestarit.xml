@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ilvesVihreä"
+    tools:context=".Etsi_suomenmestarit">
+
+
+    <TextView
+        android:id="@+id/pisteet"
+        android:textSize="25sp"
+        android:layout_width="118dp"
+        android:layout_height="48dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="@string/pisteet"
+        android:textColor="@color/ilvesKeltainen"
+        app:layout_constraintBottom_toTopOf="@+id/flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.279"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.816" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="108dp"
+        android:layout_height="79dp"
+        app:srcCompat="@drawable/kanadamalja"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="392dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="87dp"
+        android:layout_height="53dp"
+        app:srcCompat="@drawable/kanadamalja"
+        tools:layout_editor_absoluteX="116dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="90dp"
+        android:layout_height="54dp"
+        app:srcCompat="@drawable/kanadamalja"
+        tools:layout_editor_absoluteY="227dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="108dp"
+        android:layout_height="59dp"
+        app:srcCompat="@drawable/kanadamalja"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="239dp"
+        android:layout_height="171dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="imageView8,imageView7,imageView6,imageView9"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.467" />
+
+    <TextView
+        android:id="@+id/textViewPeli"
+        android:layout_width="224dp"
+        android:layout_height="67dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="@string/textViewPeli"
+        android:textColor="@color/ilvesKeltainen"
+        app:layout_constraintBottom_toTopOf="@+id/flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <Button
+        android:id="@+id/buttonUudestaan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#FFC107"
+        android:gravity="center"
+        android:text="@string/buttonUudestaan"
+        android:textColor="#1C592D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flow" />
+
+    <TextView
+        android:id="@+id/textViewPalaute"
+        android:layout_width="227dp"
+        android:layout_height="83dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="@string/textViewPalaute"
+        android:textColor="@color/ilvesKeltainen"
+        app:layout_constraintBottom_toTopOf="@+id/flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPeli" />
+
+    <Button
+        android:id="@+id/buttonTakaisin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="10dp"
+        android:autoSizeTextType="uniform"
+        android:backgroundTint="#FFC107"
+        android:gravity="center"
+        android:text="@string/buttonTakaisin"
+        android:textColor="#1C592D"
+        app:layout_constraintBottom_toTopOf="@+id/buttonUudestaan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flow" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:textSize="25sp"
+        android:layout_width="98dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginEnd="143dp"
+        android:layout_marginBottom="431dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/ilvesKeltainen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.829" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ilves 2023</string>
+    <string name="starter_text">Hei</string>
+    <string name="button">ALOITA</string>
+    <string name="buttonPeli">Minipeli</string>
+    <string name="textViewPeli">Etsi seuraava Liigan mestari!</string>
+    <string name="textViewPalaute">Löysit mestarit!</string>
+    <string name="buttonUudestaan">Pelaa uudestaan</string>
+    <string name="buttonTakaisin">Takaisin etusivulle</string>
+    <string name="title_activity_bottom_navigation">Alanavigaatio</string>
+    <string name="title_home">Koti</string>
+    <string name="title_dashboard">Hallintapaneeli</string>
+    <string name="title_notifications">Ilmoitukset</string>
+    <string name="pisteet">Yritykset:</string>
+    <string name="buttonNäytäSijainti">Näytä sijainti</string>
+    <string name="outlinedTextField">Leveysaaste</string>
+    <string name="outlinedTextField2">Leveysaste</string>
+    <string name="outlinedTextField3">Osoite</string>
+    <string name="buttonHaeSijainti">Näytä sijainti</string>
+    <string name="startButton">Aloita</string>
+    <string name="stoptButton">Lopeta</string>
+    <string name="pauseButton">Keskeytä</string>
+    <string name="timerStopText">Valmis</string>
+    <string name="airplaneModeOn">Lentokonetila on päällä! </string>
+    <string name="airplaneModeOff">Lentokonetila ei ole päällä! </string>
+    <string name="searchButton">Hae</string>
+    <string name="editText">Kirjoita yrityksen nimi tähän</string>
+
+</resources>
